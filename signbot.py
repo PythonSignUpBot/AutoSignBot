@@ -16,7 +16,7 @@ for row in range(0, dataframe1.max_row):
                 month = random.randint(1, 12)
                 year = random.randint(1958, 1994)
                 birthday = str(day) + '/' + str(month) + '/' + str(year)
-                dataframe1.cell(row, 2).value = 3
-                print(col[row].value)
+                mycell = dataframe1.cell(row, 2);
+                mycell.value = 3
 
 dataframe.save("signupinfo.xlsx")
