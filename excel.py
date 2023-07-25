@@ -1,5 +1,5 @@
 from openpyxl import load_workbook #importa a biblioteca de comunicação entre o Excel e o Python
-pastas = (r'C:\Users\flavi\Desktop\pythontraining\Meuarquivo.xlsx') #caminho da planilha do Excel já existente
+pastas = (r'/Meuarquivo.xlsx') #caminho da planilha do Excel já existente
 
 import time #importa a biblioteca tempo
 
