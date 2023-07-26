@@ -18,8 +18,8 @@ for row in range(0, dataframe1.max_row):
                 month = random.randint(1, 12)
                 year = random.randint(1958, 1994)
                 birthday = str(day) + '/' + str(month) + '/' + str(year)
-                cellName = colName[row]+str(2)
+                cellName = colName[col[row].column]+str(row)
                 print(cellName)
-                dataframe1.cell(row=2, column=2).value = birthday
+                dataframe1[cellName].value = birthday
 
 dataframe.save("a.xlsx")
