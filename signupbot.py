@@ -8,6 +8,7 @@ dataframe = openpyxl.load_workbook("signupinfo.xlsx")
 dataframe1 = dataframe.active
  
 colName = ['A', 'B', 'C', 'D', 'E', 'F']
+prevPhoneNumber = ["+075 ", "+074 "]
 
 # Iterate the loop to read the cell values
 for row in range(0, dataframe1.max_row):
@@ -19,7 +20,14 @@ for row in range(0, dataframe1.max_row):
                 year = random.randint(1958, 1994)
                 birthday = str(day) + '/' + str(month) + '/' + str(year)
                 cellName = colName[col[row].column - 1]+str(row+1)
-                print(cellName)
                 dataframe1[cellName].value = birthday
+            elif col[row].column == 6:
+                prevNum = random.randint(0, 1)
+                backPhoneNumber = random.randint(12345678, 98765432)
+                phoneNumber = prevPhoneNumber[prevNum] + str(backPhoneNumber)
+                print(phoneNumber)
+                cellName = 'F' + str(row+1)
+                dataframe1[cellName].value = phoneNumber
 
-dataframe.save("a.xlsx")
+
+dataframe.save("signupinfo.xlsx")
