@@ -18,7 +18,7 @@ for row in range(0, dataframe1.max_row):
                 month = random.randint(1, 12)
                 year = random.randint(1958, 1994)
                 birthday = str(day) + '/' + str(month) + '/' + str(year)
-                cellName = colName[col[row].column]+str(row)
+                cellName = colName[col[row].column - 1]+str(row)
                 print(cellName)
                 dataframe1[cellName].value = birthday
 
