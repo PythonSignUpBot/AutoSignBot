@@ -45,5 +45,6 @@ for row in range(0, dataframe1.max_row):
               data = response.json()
               cellName = 'E' + str(row+1)
               dataframe1[cellName].value = data['data']['email']
+              print(data['data']['email'])
 
 dataframe.save("signupinfo.xlsx")
