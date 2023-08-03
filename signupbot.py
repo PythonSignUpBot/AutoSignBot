@@ -11,7 +11,7 @@ dataframe1 = dataframe.active
  
 colName = ['A', 'B', 'C', 'D', 'E', 'F']
 prevPhoneNumber = ["+075 ", "+074 "]
-url = 'https://api.box.com/2.0/users/27774750060/email_aliases'
+url = 'https://app.anonaddy.com/api/v1/aliases'
 payload = {
     "domain": "anonaddy.me",
     "description": "For example.com",
