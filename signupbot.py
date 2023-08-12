@@ -9,7 +9,7 @@ dataframe = openpyxl.load_workbook("signupinfo.xlsx")
 # Define variable to read sheet
 dataframe1 = dataframe.active
  
-colName = ['A', 'B', 'C', 'D', 'E', 'F']
+
 prevPhoneNumber = ["+075 ", "+074 "]
 url = 'https://app.anonaddy.com/api/v1/aliases'
 payload = {
